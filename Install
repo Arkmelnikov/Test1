@@ -17,6 +17,10 @@ Html-extra - составление html отчетов о тесте.
 npm i newman-reporter-htmlextra
 npm install -g newman-reporter-html
 
+newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json -r htmlextra --reporter-htmlextra-export ./results/
+
+
+
 Fiddler classic (ewerywhere) - сниффер трафика и подмена запросов.
 
 
