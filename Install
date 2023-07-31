@@ -22,5 +22,10 @@ newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json
 
 
 Fiddler classic (ewerywhere) - сниффер трафика и подмена запросов.
+На ios:
+После скачки файла:
+1. VPN и управление устройством.
+2. Об этом устройстве -> Доверие сертификатам.
+
 
 
