@@ -15,6 +15,7 @@ Set-ExecutionPolicy -ExecutionPolicy Unrestricted             -> A
 
 Html-extra - составление html отчетов о тесте.
 npm i newman-reporter-htmlextra
+npm install -g newman-reporter-html
 
 Fiddler classic (ewerywhere) - сниффер трафика и подмена запросов.
 
