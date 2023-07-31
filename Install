@@ -1,0 +1,21 @@
+Расширение Fake Filler.
+Расширение Web Deweloper.
+Расширение Postman Interceptor.
+
+Рандомные Дата файлы (для генерации csv файлов для постмана) - Mockaroo.
+
+
+Newman - прогон тестов Postman.
+
+npm install -g newman
+npm install -g npm@9.8.1 (возможно потребуется)
+Скрипт:
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted             -> A
+.\choco-install.ps1
+
+Html-extra - составление html отчетов о тесте.
+npm i newman-reporter-htmlextra
+
+Fiddler classic (ewerywhere) - сниффер трафика и подмена запросов.
+
+
