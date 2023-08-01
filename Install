@@ -32,4 +32,11 @@ Fiddler classic (ewerywhere) - сниффер трафика и подмена �
 2. Об этом устройстве -> Доверие сертификатам.
 
 
+Allure
+pip install allure-pytest
+npm install -g allure-commandline --save-dev
+mkdir allure-report
+allure generate allure-report
+allure serve allure-report
+
 
