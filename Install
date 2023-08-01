@@ -20,6 +20,9 @@ npm install -g newman-reporter-html
 newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json -r htmlextra --reporter-htmlextra-export ./results/
 
 
+Pytest
+pytest -s -v tests/"название".py
+
 Git.
 git init
 git remote add "название" "ссылка"
@@ -36,6 +39,7 @@ Allure
 pip install allure-pytest
 npm install -g allure-commandline --save-dev
 mkdir allure-report
+pytest -s -v tests/response.py --alluredir=allure-report
 allure generate allure-report
 allure serve allure-report
 
