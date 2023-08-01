@@ -22,8 +22,8 @@ newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json
 
 Git.
 git init
-
-
+git remote add "название" "ссылка"
+git clone "ссылка"
 
 Fiddler classic (ewerywhere) - сниффер трафика и подмена запросов.
 На ios:
