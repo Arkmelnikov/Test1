@@ -21,7 +21,11 @@ newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json
 
 
 Pytest
-pytest -s -v tests/"название".py
+pytest -s -v tests/"название.py"
+
+Pylynt
+pip install pylint
+pylint "местоположение\название.py"
 
 Git.
 git init
