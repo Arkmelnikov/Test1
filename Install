@@ -46,6 +46,7 @@ mkdir allure-report
 pytest -s -v tests/response.py --alluredir=allure-report
 allure generate allure-report
 allure serve allure-report
+allure generate --clean
 python -m pytest tests/test_login_fixture.py --alluredir=allure-report                   (Если не работают обычные вызовы)
 
 
