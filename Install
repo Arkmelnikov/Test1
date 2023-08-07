@@ -49,4 +49,9 @@ allure serve allure-report
 allure generate --clean
 python -m pytest tests/test_login_fixture.py --alluredir=allure-report                   (Если не работают обычные вызовы)
 
+pip install mitmproxy2swagger
+https://mitmproxy.org/
 
+Скрипт для сохранения переменной:
+var xsrfCookie = postman.getResponseCookie("csrftoken");
+postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);
