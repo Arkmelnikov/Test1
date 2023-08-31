@@ -49,6 +49,7 @@ allure serve allure-report
 allure generate --clean
 python -m pytest tests/test_login_fixture.py --alluredir=allure-report                   (Если не работают обычные вызовы)
 pytest my-project/tests/ --numprocesses auto --alluredir=allure-report                   (параллельный запуск тестов)
+python -m pytest my-project/tests/B_B_GAME/TRAINING/test_Guests.py --dist=each --tx=3*popen   (запуск теста N количество итераций)
 
 
 pip install mitmproxy2swagger
