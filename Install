@@ -23,6 +23,17 @@ newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json
 Pytest
 pytest -s -v tests/"название.py"
 
+@pytest.mark.parametrize("a, b", [("qq@qq.qq", "1111"),
+                                  ("www@www.ww", "1111")
+                                  ])
+def test_game_training(login_logout_game, a, b):
+    page = login_logout_game
+    page.goto("www")
+    page.get_by_label("E-mail").fill(a)
+    page.get_by_label("Пароль").fill(b)
+
+
+
 Pylynt
 pip install pylint
 pylint "местоположение\название.py"
