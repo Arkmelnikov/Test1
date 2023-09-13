@@ -19,6 +19,13 @@ npm install -g newman-reporter-html
 
 newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json -r htmlextra --reporter-htmlextra-export ./results/
 
+Пререквест
+    pm.request.headers.add({
+        key: "Cookie",
+        value: "Cookie"
+        });
+    
+
 
 Pytest
 pytest -s -v tests/"название.py"
