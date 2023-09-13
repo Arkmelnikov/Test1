@@ -22,7 +22,7 @@ newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json
 Пререквест
     pm.request.headers.add({
         key: "Cookie",
-        value: "Cookie"
+        value: "{{Cookie}}"
         });
     
 
