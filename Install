@@ -5,6 +5,30 @@
 Рандомные Дата файлы (для генерации csv файлов для постмана) - Mockaroo.
 
 
+npx playwright codegen - вызов записи шагов.
+
+Важные марки:
+@pytest.mark.owner
+@allure.title
+@allure.link
+@allure.epic
+@allure.feature
+@allure.story
+@allure.description
+
+Фикстуры:
+@pytest.fixture(scope="session")
+def login_logout_SABY(playwright: Playwright):
+    browser = playwright.chromium.launch(headless= False)
+    context = browser.new_context()
+    context.add_cookies(ForTest.ХХХ)
+    page = context.new_page()
+    # print(context.cookies())
+    yield page
+    page.close()
+    browser.close()
+
+
 Newman - прогон тестов Postman.
 
 npm install -g newman
