@@ -1,23 +1,45 @@
+ОШИБКИ!!!
 При ошибке - 'npm' is not recognized as internal or external command, operable program or batch file            <<<---Скачать node.js      (https://nodejs.org/en/download)
 При ошибке - pip: The term 'pip' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.        <<<--- Скачать python    (https://www.python.org/downloads/
-При ошибке - git: The term 'git' is not recognized as a name of a cmdlet, function, script file, or executable program.
-Check the spelling of the name, or if a path was included, verify that the path is correct and try again.   <<<---Скачать git  (https://git-scm.com/download/win)
+При ошибке - git: The term 'git' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.   <<<---Скачать git  (https://git-scm.com/download/win)
 
-
-
-
-
-
-
-
+ПОЛЕЗНОЕ!!!
 Расширение Fake Filler.
 Расширение Web Deweloper.
 Расширение Postman Interceptor.
-
 Рандомные Дата файлы (для генерации csv файлов для постмана) - Mockaroo.
+Fiddler classic (ewerywhere) - сниффер трафика и подмена запросов.
+На ios:
+После скачки файла:
+1. VPN и управление устройством.
+2. Об этом устройстве -> Доверие сертификатам.
 
 
+PLAYWRIGHT — это библиотека автоматизации.
+pip install pytest-playwright
+playwright install
 npx playwright codegen - вызов записи шагов.
+PYTEST - это среда тестирования, основанная на Python (важное правило - НАЗВАНИЕ ФАЙЛА СОДЕРЖИТ СЛОВО - test) (Пример - test_Run)
+pytest -s -v tests/"название.py"
+
+NEWMAN - прогон тестов Postman.
+npm install -g newman
+npm install -g npm@9.8.1 (возможно потребуется)
+Скрипт:
+Set-ExecutionPolicy -ExecutionPolicy Unrestricted             -> A
+.\choco-install.ps1
+
+HTMLEXTRA - составление html отчетов о тесте.
+npm i newman-reporter-htmlextra
+npm install -g newman-reporter-html
+newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json -r htmlextra -d (дальше дата файл)
+
+GIT - распределённая система управления версиями.
+git init
+git remote add "название" "ссылка"
+git clone "ссылка"
+
+
 
 Важные марки:
 @pytest.mark.owner
@@ -41,20 +63,6 @@ def login_logout_SABY(playwright: Playwright):
     browser.close()
 
 
-Newman - прогон тестов Postman.
-
-npm install -g newman
-npm install -g npm@9.8.1 (возможно потребуется)
-Скрипт:
-Set-ExecutionPolicy -ExecutionPolicy Unrestricted             -> A
-.\choco-install.ps1
-
-Html-extra - составление html отчетов о тесте.
-npm i newman-reporter-htmlextra
-npm install -g newman-reporter-html
-
-newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json -r htmlextra -d (дальше дата файл)
-
 Пререквест
     pm.request.headers.add({
         key: "Cookie",
@@ -62,9 +70,6 @@ newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json
         });
     
 
-
-Pytest
-pytest -s -v tests/"название.py"
 
 @pytest.mark.parametrize("a, b", [("qq@qq.qq", "1111"),
                                   ("www@www.ww", "1111")
@@ -77,14 +82,10 @@ def test_game_training(login_logout_game, a, b):
 
 
 
-Pylynt
+Pylynt - линтер
 pip install pylint
 pylint "местоположение\название.py"
 
-Git.
-git init
-git remote add "название" "ссылка"
-git clone "ссылка"
 
 Fiddler classic (ewerywhere) - сниффер трафика и подмена запросов.
 На ios:
