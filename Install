@@ -49,6 +49,10 @@ npx playwright codegen - вызов записи шагов.
 PYTEST - это среда тестирования, основанная на Python (важное правило - НАЗВАНИЕ ФАЙЛА СОДЕРЖИТ СЛОВО - test) (Пример - test_Run) (Каждый тест содержит - test) (Пример - def test_game_training) 
 pytest -s -v tests/"название.py"
 
+REQUESTS - библиотека запросов
+pip install requests
+
+
 PYLINT - линтер
 pip install pylint
 pylint "местоположение\название.py"
