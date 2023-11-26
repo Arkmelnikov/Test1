@@ -19,7 +19,7 @@ PLAYWRIGHT — это библиотека автоматизации.
 pip install pytest-playwright
 playwright install
 npx playwright codegen - вызов записи шагов.
-PYTEST - это среда тестирования, основанная на Python (важное правило - НАЗВАНИЕ ФАЙЛА СОДЕРЖИТ СЛОВО - test) (Пример - test_Run)
+PYTEST - это среда тестирования, основанная на Python (важное правило - НАЗВАНИЕ ФАЙЛА СОДЕРЖИТ СЛОВО - test) (Пример - test_Run) (Каждый тест содержит - test) (Пример - def test_game_training) 
 pytest -s -v tests/"название.py"
 
 NEWMAN - прогон тестов Postman.
