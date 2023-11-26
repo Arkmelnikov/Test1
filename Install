@@ -30,6 +30,8 @@ postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);
 GIT - распределённая система управления версиями.
 git init
 git remote add origin https://github.com/Nickname/my-project.git      <<<---Заместо origin может быть любое название ветки
+git remote -v    <<<---Проверка подключения
+git remote remove origin    <<<---Удаление подключения
 git clone https://github.com/Nickname/my-project.git   <<<---Setting в Гите <<<---Delevoper Setting <<<---Personal access tokens <<<---Generate new token <<<---Поставить галочку на REPO - ПАРОЛЬ ОТ ГИТА! при клонировании
 Не забыть провалиться в папку проекта!!!
 git config --global user.email Mickey-sc@yandex.ru
