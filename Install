@@ -2,6 +2,8 @@
 При ошибке - 'npm' is not recognized as internal or external command, operable program or batch file            <<<---Скачать node.js      (https://nodejs.org/en/download)
 При ошибке - pip: The term 'pip' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.        <<<--- Скачать python    (https://www.python.org/downloads/
 При ошибке - git: The term 'git' is not recognized as a name of a cmdlet, function, script file, or executable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.   <<<---Скачать git  (https://git-scm.com/download/win)
+При ошибке - ModuleNotFoundError: No module named 'playwright'  <<<---    pip install playwright
+
 
 ПОЛЕЗНОЕ!!!
 Расширение Fake Filler.
@@ -31,6 +33,7 @@ git remote add my-project https://github.com/Nickname/my-project.git
 git clone https://github.com/Nickname/my-project.git   <<<---Setting в Гите <<<--- Delevoper Setting <<<---Personal access tokens <<<---Generate new token <<<---Поставить галочку на REPO - ПАРОЛЬ ОТ ГИТА! при клонировании
       
 PLAYWRIGHT — это библиотека автоматизации.
+pip install playwright
 pip install pytest-playwright
 playwright install
 npx playwright codegen - вызов записи шагов.
