@@ -14,6 +14,21 @@ Fiddler classic (ewerywhere) - сниффер трафика и подмена �
 1. VPN и управление устройством.
 2. Об этом устройстве -> Доверие сертификатам.
 
+Скрипт для сохранения переменной:
+var xsrfCookie = postman.getResponseCookie("csrftoken");
+postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);
+
+Пререквест
+    pm.request.headers.add({
+        key: "Cookie",
+        value: "{{Cookie}}"
+        });
+
+
+GIT - распределённая система управления версиями.
+git init
+git remote add "название" "ссылка"
+git clone "ссылка"
 
 PLAYWRIGHT — это библиотека автоматизации.
 pip install pytest-playwright
@@ -21,6 +36,22 @@ playwright install
 npx playwright codegen - вызов записи шагов.
 PYTEST - это среда тестирования, основанная на Python (важное правило - НАЗВАНИЕ ФАЙЛА СОДЕРЖИТ СЛОВО - test) (Пример - test_Run) (Каждый тест содержит - test) (Пример - def test_game_training) 
 pytest -s -v tests/"название.py"
+
+PYLINT - линтер
+pip install pylint
+pylint "местоположение\название.py"
+
+Allure
+pip install allure-pytest
+npm install -g allure-commandline --save-dev
+mkdir allure-report
+pytest -s -v tests/response.py --alluredir=allure-report
+allure generate allure-report
+allure serve allure-report
+allure generate --clean
+python -m pytest tests/test_login_fixture.py --alluredir=allure-report                   (Если не работают обычные вызовы)
+pytest my-project/tests/ --numprocesses auto --alluredir=allure-report                   (параллельный запуск тестов)
+python -m pytest my-project/tests/B_B_GAME/TRAINING/test_Guests.py --dist=each --tx=3*popen   (запуск теста N количество итераций)
 
 NEWMAN - прогон тестов Postman.
 npm install -g newman
@@ -34,10 +65,6 @@ npm i newman-reporter-htmlextra
 npm install -g newman-reporter-html
 newman run Perehvat.postman_collection.json -e ePerehvat.postman_collection.json -r htmlextra -d (дальше дата файл)
 
-GIT - распределённая система управления версиями.
-git init
-git remote add "название" "ссылка"
-git clone "ссылка"
 
 
 
@@ -63,14 +90,6 @@ def login_logout_SABY(playwright: Playwright):
     browser.close()
 
 
-Пререквест
-    pm.request.headers.add({
-        key: "Cookie",
-        value: "{{Cookie}}"
-        });
-    
-
-
 @pytest.mark.parametrize("a, b", [("qq@qq.qq", "1111"),
                                   ("www@www.ww", "1111")
                                   ])
@@ -82,34 +101,6 @@ def test_game_training(login_logout_game, a, b):
 
 
 
-Pylynt - линтер
-pip install pylint
-pylint "местоположение\название.py"
-
-
-Fiddler classic (ewerywhere) - сниффер трафика и подмена запросов.
-На ios:
-После скачки файла:
-1. VPN и управление устройством.
-2. Об этом устройстве -> Доверие сертификатам.
-
-
-Allure
-pip install allure-pytest
-npm install -g allure-commandline --save-dev
-mkdir allure-report
-pytest -s -v tests/response.py --alluredir=allure-report
-allure generate allure-report
-allure serve allure-report
-allure generate --clean
-python -m pytest tests/test_login_fixture.py --alluredir=allure-report                   (Если не работают обычные вызовы)
-pytest my-project/tests/ --numprocesses auto --alluredir=allure-report                   (параллельный запуск тестов)
-python -m pytest my-project/tests/B_B_GAME/TRAINING/test_Guests.py --dist=each --tx=3*popen   (запуск теста N количество итераций)
-
 
 pip install mitmproxy2swagger
 https://mitmproxy.org/
-
-Скрипт для сохранения переменной:
-var xsrfCookie = postman.getResponseCookie("csrftoken");
-postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);
