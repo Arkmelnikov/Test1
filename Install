@@ -27,6 +27,32 @@ postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);
         });
 
 
+const Cookie = require('postman-collection').Cookie;
+
+const oResponseHeaders = pm.response.headers;
+oResponseHeaders.filter(function(resHeader){
+    //console.log("resHeader : ",resHeader);
+    
+    let bSetCookieExists = resHeader.key.includes("Set-Cookie");
+    if(bSetCookieExists){
+        console.log('cookie : ',resHeader.key.includes("Set-Cookie"));
+        
+        let  rawHeader = pm.response.headers.get("Set-Cookie");
+        let myCookie = new Cookie(rawHeader);
+        console.log("myCookie : ",myCookie.toJSON());
+        console.log("myCookie name : ", myCookie.name);
+        console.log("myCookie value : ", myCookie.value);
+      
+    }
+    
+
+})
+pm.response.headers.get('Set-Cookie').
+  split('; ').find(s=>s.startsWith('myCookieName='))?.split('=')[1]
+
+
+
+
 Добавляется в Тесты:
 // Fix SyntaxError: missing ) after argument list
 const cookieJar = pm.cookies.jar();
