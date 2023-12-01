@@ -27,6 +27,18 @@ postman.setEnvironmentVariable('csrftoken', xsrfCookie.value);
         });
 
 
+Добавляется в Тесты:
+// Fix SyntaxError: missing ) after argument list
+const cookieJar = pm.cookies.jar();
+// create a cookie
+cookieJar.set("https://fix-sso.sbis.ru", "cookie name", "cookie value", function(error, cookie) {
+  // callback function
+});
+// get the created cookies
+cookieJar.getAll("https://fix-sso.sbis.ru", function (error, cookies) { });
+
+
+
 GIT - распределённая система управления версиями.
 git init
 git remote add origin https://github.com/Nickname/my-project.git      <<<---Заместо origin может быть любое название ветки
