@@ -100,9 +100,10 @@ pip install allure-pytest
 npm install -g allure-commandline --save-dev
 mkdir allure-report
 pytest -s -v tests/response.py --alluredir=allure-report
-allure generate allure-report
-allure serve allure-report
-allure generate --clean
+npx allure serve allure-report          <<< - Вызов HTML
+allure generate allure-report ЕСЛИ ОШИБКА, ТО ВНАЧАЛЕ npx
+allure serve allure-report ЕСЛИ ОШИБКА, ТО ВНАЧАЛЕ npx
+allure generate --clean   ЕСЛИ ОШИБКА, ТО ВНАЧАЛЕ npx
 python -m pytest tests/test_login_fixture.py --alluredir=allure-report                   (Если не работают обычные вызовы)
 pytest my-project/tests/ --numprocesses auto --alluredir=allure-report                   (параллельный запуск тестов)
 python -m pytest my-project/tests/B_B_GAME/TRAINING/test_Guests.py --dist=each --tx=3*popen   (запуск теста N количество итераций)
