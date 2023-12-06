@@ -159,3 +159,23 @@ def test_game_training(login_logout_game, a, b):
 
 pip install mitmproxy2swagger
 https://mitmproxy.org/
+
+
+
+
+import requests
+import pytest
+import allure
+
+new_data = dict(jsonrpc="2.0", method="SPPEvent.SendNotificationByParams", params={
+    "ClientID": "201629594",
+    "UserID": "201629595",
+    "EventTypesData": {"0": {"EventSubtype": 0, "ContractorID": "null"}}
+}, protocol=5, id=0)
+
+url_post = "http://sbis-spp-event-00.fix-spp-event.svc.fix1.k8s.tensor.ru:8000/sbis-spp-event-00g-676cb86ddd-r5ckf"
+
+post_response = requests.post(url_post, json=new_data)
+
+post_response_json = post_response.json()
+print(post_response_json)
